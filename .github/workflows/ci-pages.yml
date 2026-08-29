@@ -41,7 +41,7 @@ jobs:
 
   deploy:
     name: Deploy static web preview
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository_visibility == 'public'
     needs: test
     runs-on: ubuntu-latest
     permissions:
