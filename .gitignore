@@ -1,0 +1,16 @@
+# macOS and Python runtime files
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Rebuildable market data and analysis artifacts
+/institutional-flow-poc/data/raw/
+/institutional-flow-poc/data/processed/
+/institutional-flow-poc/outputs/
+/institutional-flow-poc/work/
+
+# Local export bundles generated during analysis
+/outputs/

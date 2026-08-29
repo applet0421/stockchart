@@ -1,0 +1,5 @@
+export function renderQuality(container, quality, meta) {
+  const status = quality.success ? "可用" : "不可用";
+  const rows = [["狀態", status], ["完整交易日", `${quality.successful_days ?? "—"}/${quality.required_days ?? "—"}`], ["market row count", quality.market_row_count ?? "—"], ["flow row count", quality.flow_row_count ?? "—"], ["duplicate", quality.duplicate_failure_count ?? "—"], ["arithmetic failure", quality.arithmetic_failure_count ?? "—"], ["missing symbol", quality.missing_in_flow_count ?? "—"], ["generated_at", meta.generated_at || "—"]];
+  container.innerHTML = `<div class="page-header"><div><h1 id="page-title">資料品質</h1><p class="muted">所有圖表與觀察都應能回到這份摘要。</p></div></div><div class="table-wrap"><table><tbody>${rows.map(([key, value]) => `<tr><th>${key}</th><td>${value}</td></tr>`).join("")}</tbody></table></div><section class="card" style="margin-top:1rem"><h2>來源 URL</h2><ul>${Object.entries(quality.source_urls || {}).map(([key, value]) => `<li>${key}: <a href="${value}" target="_blank" rel="noreferrer">${value}</a></li>`).join("") || "<li>—</li>"}</ul></section>`;
+}

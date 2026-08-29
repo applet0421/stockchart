@@ -1,0 +1,5 @@
+{
+  "meta": {"model":"A","x_metric":"flow_5d","y_metric":"flow_1d","basis":"shares","date_min":"2026-08-27","date_max":"2026-08-28","generated_at":"2026-08-29T00:00:00Z"},
+  "latest": [{"date":"2026-08-28","institution":"all","industry_code":"01","sector":"水泥工業","industry_name":"水泥工業","model_a_x":0.2,"model_a_y":0.1,"model_a_quadrant":"ACCUMULATING","flow_1d":0.1,"flow_5d":0.2,"flow_20d":0.3,"breadth_5d":0.5,"top1_concentration_5d":0.6,"top3_concentration_5d":0.8,"stock_count_5d":7}],
+  "history": [], "rankings": {}, "quality": {"success":true,"required_days":2,"successful_days":2,"missing_in_flow_count":0,"failure":[]}, "institutions":["all"], "institution_comparison":[]
+}
